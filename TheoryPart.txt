@@ -1,0 +1,38 @@
+QUESTION#1
+Difference b/w Parallelism and Concurrency.
+
+Parallelism:
+In Parallelism,a task splits into smaller parts or subtasks which can be processed in parallel way i.e. on multiple CPU's at the same time.
+It techniques to make program faster by working on various subtasks at the exact time but requires hardware with multiple processing units.
+Actually, parallelism is about how an application handles a task. It may process the task sequentially from start to end, or split the task into
+subtasks which can be completed in parallel.It follows the principle of "independability" because subtasks do not depend on each other's 
+progress.It's purpose is to increase the computational speed by using multiple CPU's and executing the different tasks at the same time.
+It involves several independent computing processing units which are parallelly operating and performing tasks in order to increase the
+speed and improve throughput.
+
+Concurrency:
+Concurrency is not parallelism,it is the composition of independently executing process.In simple words,concurrency is when two or more tasks
+can start,run and compile in overlapping time periods.It is not necessary that it has completely finish one task before it begins to next.
+It doesn't necessarily mean they'll ever both be running at the same time(as in parallelism).It produces the illusion of parallelism but in
+actual tasks are not parallelly processed.This technique is utilized for decreasing the response time of the system using single processing 
+unit.Concurrency is obtained by "interleaving" operation of processes on the CPU through context switching where the control is swiftly 
+switched between different threads of processes.That is the reason it look like parallel processing. For example multitasking on single core
+machine.
+
+QUESTION#2:
+Ctrl+Z is used to send stop signal to foreground process.Find the stop signal which can be givn to kill coomand  to stop background process.
+
+1- kill -SIGSTOP [PID]
+   Used to stop the process.It cannot be handled,ignored or blocked.
+   Signal No: 17,19,23
+   
+2- kill -SIGTSTP [PID]
+   Interactive stop signal.It can be ignored.
+   Signal No: 18,20,24
+   
+QUESTION#3
+How to chanage the refresh time of "top" command.Change the default time to 10 sec.
+
+-d (delay) command is used to specifies and change the time of delay in seconds among top updates.
+For changing the default time of "top" command to 10 sec,
+top -d 10

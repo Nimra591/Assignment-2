@@ -16,7 +16,7 @@ int sum=0;
 int status_t1[10];
 pthread_t thread_t1[10];
 for(int x=0;x<1000;x++){
-ar[x]=x+1;
+ar[x]=x;
 }
 for(int i=0;i<10;i++){
   pthread_create(&thread_t1[i],NULL,calSum,(void*)(i*size));
